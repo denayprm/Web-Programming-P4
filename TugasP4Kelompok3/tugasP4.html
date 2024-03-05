@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <style type="text/css">
+            body {
+                font-family:'Times New Roman', Times, serif;
+            }
+            table {
+                border-collapse: collapse;
+            }
+            td {
+                border: 2px solid #000;
+                padding: 0.5cm 12cm;
+                text-align: center;
+            }
+            a {
+                color: blue;
+                text-decoration: none;
+                font-size: 20px;
+            }
+            a[class=one] {
+                color: blue;
+                background-color: green;
+                font-weight: bold;
+            }
+            a.one:visited {
+                color: yellow
+            }
+            a.one:hover {
+                color: blue
+            }
+            p {
+                font-size: 18px;
+            }
+        </style>
+        <title>Tugas P4 - Kelompok 3</title>
+    </head>
+
+    <body>
+        <p>
+            Penerapan CSS pada halaman ini melalui media file. Bukan menuliskannya langsung diantara tag head.
+        </p>
+        <table>
+            <tr><td><a target="_self" href="tugasP4.html">Ini link biasa</a></td></tr>
+            <tr><td><a class="one" target="_self" href="tugasP4.html">Ini link dengan class</a></td></tr>
+        </table>
+        <p>
+            Dari contoh 2 link diatas dimana link 2 masih mendapat efek tebal dari hover biasa. Namun dia juga mendapat efek sendiri yaitu background hijau dan warna kuning. Yang seperti ini juga biasa disebut dengan <span><b>PEWARISAN (inheritance).</b></span>
+        </p>
+    </body>
+</html>

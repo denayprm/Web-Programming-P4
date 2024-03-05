@@ -1,29 +1,31 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <style type="text/css">
-            a:link {color: #ff0000}
-            a.one:visited {color: #0000ff}
-            a.one:hover {color: #ffcc00}
-            a.two:visited {color: #0000ff}
-            a.two:hover {font-size: 150%;}
-            a.three:visited {color: #0000ff}
-            a.three:hover {background: #66ff66;}
-            a.four:visited {color: #0000ff}
-            a.four:hover {font-family: fantasy}
-            a.five:visited {color: #0000ff; text-decoration: line-through;}
-            a.five:hover {text-decoration: overline;}
+        <style>
+            td {
+                padding: 1.5cm;
+            }
+            td.value2 {
+                padding: 0.5cm 2.5cm;
+            }
         </style>
+        <title>Latihan mengatur padding pada sel tabel</title>
     </head>
 
     <body>
-        <p>
-            Gerakkan pointer mouse diatas link-link dibawah ini untuk membyat link tersebut berubah tampilannya.
-        </p>
-        <p><a class="one" href="hlm1.htm">Mengubah properti color</a></p>
-        <p><a class="two" href="hlm2.htm">Mengubah properti font-size</a></p>
-        <p><a class="three" href="hlm3.htm">Mengubah properti background-color</a></p>
-        <p><a class="four" href="hlm4.htm">Mengubah properti font-family</a></p>
-        <p><a class="five" href="hlm5.htm">Mengubah properti text-decoration</a></p>
+        <table border="1">
+            <tr>
+                <td>Ini adalah tabel dengan sel yang menggunakan padding sama pada setiap sisinya (1.5cm).</td>
+            </tr>
+        </table>
+        <br>
+        <table border="1">
+            <tr>
+                <td class="value2">
+                    Bandingkan dengan tampilan tabel ini. Padding atas dan bawah memiliki nilai 0.5cm, sedangkan padding kanan dan kiri nilainya 2.5cm.
+                </td>
+            </tr>
+        </table>
     </body>
 
 </html>
