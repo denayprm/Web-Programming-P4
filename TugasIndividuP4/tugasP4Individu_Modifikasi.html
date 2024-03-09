@@ -1,21 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <style>
-        table, .inner-table, .outer-table {
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 20px;
+        }
+        table,
+        .inner-table,
+        .outer-table {
             border: 1px solid black;
             border-collapse: collapse;
             width: 100%;
+            margin-bottom: 20px;
         }
-        td, .inner-td, .outer-td {
-            border: 1px solid black;
-            padding: 8px;
+        td,
+        .inner-td,
+        .outer-td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
         }
         .yellow-bg {
-            background-color: yellow;
+            background-color: #ffeeba;
+            text-align: left;
         }
         .red-bg {
-            background-color: red;
+            background-color: #dc3545;
             color: white;
         }
         .white-bg {
@@ -25,61 +39,111 @@
             width: 80%;
             margin: auto;
         }
+        .outer-table {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .text-right {
+            text-align: right;
+        }
+        .text-left {
+            text-align: left;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .text-justify {
+            text-align: justify;
+        }
     </style>
-    <title>Atribut dari tag tabel</title>
+    <title>Modifikasi Atribut dari tag tabel</title>
 </head>
 
 <body>
-    <p><b>Membuat Tabel</b></p>
+    <h1 class="text-center">Contoh 1:Membuat Tabel</h1>
     <table>
         <tr>
-            <td>Ini adalah kolom 1 pada baris 1</td>
-            <td>Ini adalah kolom 2 pada baris 1</td>
+            <td class="text-right">Ini adalah kolom 1 pada baris 1 teks rata kanan</td>
+            <td class="text-center">Ini adalah kolom 2 pada baris 1 teks rata tengah</td>
         </tr>
         <tr>
-            <td>Ini kolom 1 pada baris 2</td>
-            <td>Ini kolom 2 pada baris 2</td>
+            <td class="text-left">Ini kolom 1 pada baris 2 teks rata kiri</td>
+            <td class="text-justify">Ini kolom 2 pada baris 2 teks rata kanan kiri</td>
         </tr>
     </table>
 
-    <p><b>Contoh 2 : Membuat Tabel</b></p>
+    <h2 class="text-center">Contoh 2: Membuat Tabel</h2>
     <table class="yellow-bg">
         <tr>
-            <td align="center"> Ini kolom 1 pada baris 1 </td>
-            <td align="right"> Ini kolom 2 pada baris 1 </td>
+            <td class="text-center">Ini kolom 1 pada baris 1</td>
+            <td class="text-right">Ini kolom 2 pada baris 1</td>
         </tr>
         <tr>
-            <td align="center" class="red-bg"> Ini kolom 1 pada baris 2 </td>
-            <td align="right" class="white-bg"> Ini kolom 2 pada baris 2 </td>
+            <td class="red-bg text-center">Ini kolom 1 pada baris 2</td>
+            <td class="white-bg text-right">Ini kolom 2 pada baris 2</td>
         </tr>
     </table>
 
-    <p><b><font color="blue">Tabel sebagai bingkai dari paragraf</font></b></p>
-    <table class="outer-table" border="1" style="border-collapse: collapse;" cellpadding="8" bgcolor="white" width="100%" bordercolor="black">
+    <h2 class="text-center">Tabel sebagai Bingkai dari Paragraf</h2>
+    <table class="outer-table">
         <tr>
             <td class="outer-td">
-                <p>Tabel memiliki peranan sangat penting dalam tampilan sebuah situs web. Tanpa tabel desainer akan mengalami kesulitan dalam mendesain sebuah halaman web. </p>
-                <p>Kalau anda perhatikan website yang memiliki tampilan yang tersusun rapi. Sebenarnya itu adalah tabel hanya saja atribut <font color="red"><b>border="0"</b></font> sehingga tabel seakan tidak ada (transparan).</p>
-                <p>Perlu diingat tag-tag pada html dapat mengandung unsur yang sama. Contoh didalam sebuah tabel terdapat tabel lagi. Dibawah ini adalah tabel yang berada di dalam tabel utama</p>
+                <p class="text-center">Tabel memiliki peranan sangat penting dalam tampilan sebuah situs web. Tanpa tabel, desainer akan mengalami kesulitan dalam mendesain sebuah halaman web.</p>
+                <p class="text-center">Jika Anda perhatikan website yang memiliki tampilan yang tersusun rapi, sebenarnya itu adalah tabel hanya saja atribut <span style="color: red;">border="0"</span> sehingga tabel seakan tidak ada (transparan).</p>
+                <p class="text-center">Perlu diingat tag-tag pada HTML dapat mengandung unsur yang sama. Contohnya, dalam sebuah tabel terdapat tabel lagi. Di bawah ini adalah tabel yang berada di dalam tabel utama.</p>
 
-                <p align="center">
-                    <table class="inner-table" border="1" style="border-collapse: collapse;" bgcolor="white" bordercolor="black" cellpadding="8" width="100%">
-                        <tr class="yellow-bg">
-                            <td class="inner-td"><b>Nama Barang</b></td>
-                            <td class="inner-td"><b>Harga Barang</b></td>
-                        </tr>
-                        <tr>
-                            <td class="inner-td">Monitor</td>
-                            <td class="inner-td">Rp. 500.000,-</td>
-                        </tr>
-                        <tr>
-                            <td class="inner-td">CDRW</td>
-                            <td class="inner-td">Rp. 245.000,0</td>
-                        </tr>
-                    </table>
-                </p>
+                <table class="inner-table">
+                    <tr class="yellow-bg">
+                        <td class="inner-td text-center"><b>Kode Program</b></td>
+                        <td class="inner-td text-center"><b>Penjelasan Kode Program</b></td>
+                    </tr>
+                    <tr>
+                        <td class="inner-td">CSS Styling</td>
+                        <td class="inner-td text-justify">
+                            <ul>
+                                <li>Mendefinisikan gaya untuk tabel, sel, dan warna latar belakang tertentu.</li>
+                                <li>Kelas .yellow-bg, .red-bg, dan .white-bg mendefinisikan warna latar belakang.</li>
+                                <li>Kelas .inner-table menetapkan lebar dan margin untuk tabel dalam.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="inner-td">Tabel Pertama</td>
+                        <td class="inner-td text-justify">
+                            <ul>
+                                <li>Struktur dasar tabel dengan dua baris dan dua kolom.</li>
+                                <li>Setiap sel berisi teks untuk demonstrasi.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="inner-td">Tabel Kedua (Contoh 2)</td>
+                        <td class="inner-td text-justify">
+                            <ul>
+                                <li>Menggunakan kelas .yellow-bg untuk latar belakang kuning.</li>
+                                <li>Penyusunan teks diatur tengah untuk kolom pertama dan sejajar kanan untuk kolom kedua.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="inner-td">Tabel Ketiga (Tabel sebagai bingkai dari paragraf)</td>
+                        <td class="inner-td text-justify">
+                            <ul>
+                                <li>Menggunakan kelas .outer-table untuk gaya.</li>
+                                <li>Sel luar berisi paragraf yang menjelaskan pentingnya tabel dalam desain web.</li>
+                                <li>Tabel dalam disertakan dengan baris header dan dua baris data, menampilkan informasi produk.</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
             </td>
         </tr>
     </table>
 </body>
+<p><br>© Deni Permana 2210512015 - Fakultas Ilmu Komputer</p>
+
 </html>
